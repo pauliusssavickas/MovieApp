@@ -23,6 +23,12 @@ namespace MovieApp.Controllers
             return View();
         }
 
+        public IActionResult RedirectToUserIndex()
+        {
+            // Redirect to the UserIndex action
+            return RedirectToAction("UserIndex", "Users");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
